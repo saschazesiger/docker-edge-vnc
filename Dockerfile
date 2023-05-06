@@ -14,5 +14,6 @@ RUN wget https://packages.microsoft.com/repos/edge/pool/main/m/microsoft-edge-st
 RUN dpkg -i /tmp/edge.deb || apt-get install -yf
 RUN rm /tmp/edge.deb
 
+
 #Server Start
 CMD ["bash", "/opt/scripts/start.sh"]
