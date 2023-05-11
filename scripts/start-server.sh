@@ -30,7 +30,7 @@ cd /browser
 while true
 do
   /usr/bin/microsoft-edge ${URL} -no-sandbox --disable-accelerated-video --bwsi --new-window --test-type --disable-accelerated-video --disable-gpu --dbus-stub --no-default-browser-check --no-first-run --bwsi --user-data-dir=/browser --disable-features=Titlebar --disable-dev-shm-usage>/dev/null &
-  while pgrep -x "microsoft-edge" > /dev/null
+  while pgrep -x "msedge" > /dev/null
   do
     sleep 1
   done
