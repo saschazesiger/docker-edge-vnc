@@ -23,8 +23,11 @@ vncserver -geometry 1024x768 -depth 16 :99 -rfbport 5900 -noxstartup -securityty
 echo "---Starting Fluxbox---"
 screen -d -m env HOME=/etc /usr/bin/fluxbox
 
+sudo adduser --disabled-password --gecos "" edge
+sudo usermod -aG sudo edge
+sudo -u edge bash << EOF
 
-echo "---Starting Chrome---"
+echo "---Starting Browser---"
 cd /browser
 
 while true
