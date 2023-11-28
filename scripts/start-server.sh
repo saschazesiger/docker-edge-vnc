@@ -29,7 +29,7 @@ cd /browser
 
 while true
 do
-  trickle -d 15000 -u 15000 /usr/bin/microsoft-edge ${URL} -no-sandbox >/dev/null &
+  trickle -d 15000 -u 15000 /usr/bin/microsoft-edge --user-data-dir=/browser --disable-accelerated-video --disable-gpu --dbus-stub --no-sandbox --test-type 
   sleep 5
   while pgrep -x "chrome" > /dev/null
   do
